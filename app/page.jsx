@@ -62,7 +62,11 @@ export default function HomePage() {
     <main>
       <header className="topbar">
         <div className="container topbar-inner">
-          <div className="brand">digitalintegration.ch</div>
+          <a href="/" className="brand">
+            <span className="brand-mark">DI</span>
+            <span>digitalintegration.ch</span>
+          </a>
+
           <a href="#contact" className="btn btn-outline">
             Parler de votre projet
           </a>
@@ -70,15 +74,20 @@ export default function HomePage() {
       </header>
 
       <section className="hero">
+        <div className="hero-orb hero-orb-1"></div>
+        <div className="hero-orb hero-orb-2"></div>
+
         <div className="container hero-grid">
           <div>
             <div className="badge">
               Développement sur mesure - Automatisation - IA appliquée
             </div>
+
             <h1>
               Des solutions digitales sur mesure pour faire avancer votre
               entreprise.
             </h1>
+
             <p className="hero-text">
               Nous concevons des applications web, des automatisations et des
               intégrations qui simplifient vos processus, réduisent les tâches
@@ -94,10 +103,19 @@ export default function HomePage() {
               </a>
             </div>
 
+            <div className="hero-trust">
+              <div className="trust-item">Approche pragmatique</div>
+              <div className="trust-item">Solutions sur mesure</div>
+              <div className="trust-item">Pensé pour PME et équipes métier</div>
+            </div>
+
             <div className="stats">
-              <div className="card small-card">
+              <div className="card small-card accent-card">
                 <h3>Sur mesure</h3>
-                <p>Pensé selon vos besoins métier, pas selon un logiciel générique.</p>
+                <p>
+                  Pensé selon vos besoins métier, pas selon un logiciel
+                  générique.
+                </p>
               </div>
               <div className="card small-card">
                 <h3>Pragmatique</h3>
@@ -155,7 +173,10 @@ export default function HomePage() {
         <div className="container two-cols">
           <div>
             <div className="section-label">Le constat</div>
-            <h2>Vos outils actuels ne suivent plus vraiment votre façon de travailler.</h2>
+            <h2>
+              Vos outils actuels ne suivent plus vraiment votre façon de
+              travailler.
+            </h2>
           </div>
 
           <div className="grid-2">
@@ -165,7 +186,7 @@ export default function HomePage() {
               "Fichiers dispersés et manque de visibilité",
               "Processus internes lourds ou fragiles",
             ].map((item) => (
-              <div className="card" key={item}>
+              <div className="card hover-card" key={item}>
                 <p>{item}</p>
               </div>
             ))}
@@ -179,14 +200,15 @@ export default function HomePage() {
             <div className="section-label">Nos solutions</div>
             <h2>Ce que nous pouvons concevoir pour vous.</h2>
             <p>
-              Chaque projet part de vos contraintes réelles. L'objectif n'est pas
-              de rajouter un outil de plus, mais de créer un système utile.
+              Chaque projet part de vos contraintes réelles. L'objectif n'est
+              pas de rajouter un outil de plus, mais de créer un système utile.
             </p>
           </div>
 
           <div className="grid-3">
             {services.map((service) => (
-              <div className="card" key={service.title}>
+              <div className="card hover-card service-card" key={service.title}>
+                <div className="service-dot"></div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </div>
@@ -199,7 +221,9 @@ export default function HomePage() {
         <div className="container two-cols">
           <div>
             <div className="section-label">Cas d'usage</div>
-            <h2>Des projets concrets, ancrés dans le quotidien de l'entreprise.</h2>
+            <h2>
+              Des projets concrets, ancrés dans le quotidien de l'entreprise.
+            </h2>
             <p>
               L'idée n'est pas de vendre de la techno pour la techno. Le but,
               c'est de résoudre un vrai problème.
@@ -208,7 +232,7 @@ export default function HomePage() {
 
           <div className="grid-2">
             {useCases.map((item) => (
-              <div className="card" key={item}>
+              <div className="card hover-card" key={item}>
                 <p>{item}</p>
               </div>
             ))}
@@ -241,14 +265,14 @@ export default function HomePage() {
             <div className="section-label">Pourquoi Digital Integration</div>
             <h2>Une logique business avant la logique technique.</h2>
             <p>
-              Nous cherchons d'abord ce qui fera gagner du temps, fluidifiera vos
-              opérations et améliorera votre pilotage.
+              Nous cherchons d'abord ce qui fera gagner du temps, fluidifiera
+              vos opérations et améliorera votre pilotage.
             </p>
           </div>
 
           <div className="grid-2">
             {benefits.map((item) => (
-              <div className="card soft-card" key={item}>
+              <div className="card soft-card hover-card" key={item}>
                 <p>{item}</p>
               </div>
             ))}
@@ -267,10 +291,13 @@ export default function HomePage() {
             </p>
 
             <div className="hero-actions">
-              <a href="mailto:contact@digitalintegration.ch" className="btn btn-white">
-                contact@digitalintegration.ch
+              <a
+                href="mailto:info@digitalintegration.ch"
+                className="btn btn-white"
+              >
+                info@digitalintegration.ch
               </a>
-              <a href="tel:+41000000000" className="btn btn-outline-white">
+              <a href="#top" className="btn btn-outline-white">
                 Planifier un échange
               </a>
             </div>
