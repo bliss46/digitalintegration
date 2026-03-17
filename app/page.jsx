@@ -290,17 +290,20 @@ export default function HomePage() {
               être simplifié, automatisé ou développé sur mesure.
             </p>
 
-            <div className="hero-actions">
-              <a
-                href="mailto:info@digitalintegration.ch"
-                className="btn btn-white"
-              >
-                info@digitalintegration.ch
-              </a>
-              <a href="#top" className="btn btn-outline-white">
-                Planifier un échange
-              </a>
-            </div>
+<div className="hero-actions">
+  <a
+    href="mailto:info@digitalintegration.ch"
+    className="btn btn-white"
+  >
+    info@digitalintegration.ch
+  </a>
+  <a
+    href="mailto:info@digitalintegration.ch"
+    className="btn btn-outline-white"
+  >
+    Ecrire un email
+  </a>
+</div>
           </div>
         </div>
       </section>
