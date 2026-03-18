@@ -3,25 +3,25 @@ export default function HomePage() {
     {
       title: "Applications web sur mesure",
       description:
-        "Des outils métiers pensés pour vos équipes, vos processus et vos contraintes réelles.",
+        "Des outils métiers conçus selon vos besoins réels, vos équipes et vos processus.",
     },
     {
       title: "Automatisation et IA",
       description:
-        "Réduction des tâches répétitives, génération de contenus, workflows intelligents et assistants internes.",
+        "Réduction des tâches répétitives, workflows intelligents, génération de contenus et assistance métier.",
     },
     {
       title: "Intégration de vos outils",
       description:
-        "Connexion entre ERP, CRM, formulaires, bases de données, emails et systèmes internes.",
+        "Connexion entre ERP, CRM, formulaires, bases de données et systèmes internes.",
     },
   ];
 
   const useCases = [
     "Portail client ou espace collaborateur",
     "Saisie terrain avec génération automatique de PDF",
-    "Centralisation des données entre plusieurs outils",
-    "Automatisation de demandes internes et validations",
+    "Centralisation de données entre plusieurs outils",
+    "Automatisation de validations et demandes internes",
     "Tableaux de bord métiers sur mesure",
     "Assistant IA interne pour retrouver l'information utile",
   ];
@@ -29,18 +29,18 @@ export default function HomePage() {
   const steps = [
     {
       number: "01",
-      title: "Cadrage rapide",
-      text: "On clarifie votre besoin, vos irritants et la valeur attendue.",
+      title: "Compréhension du besoin",
+      text: "On clarifie votre contexte, vos irritants et la valeur attendue.",
     },
     {
       number: "02",
-      title: "Prototype concret",
-      text: "On formalise une approche simple, visible et chiffrée.",
+      title: "Cadrage de la solution",
+      text: "On définit une approche simple, réaliste et adaptée à votre entreprise.",
     },
     {
       number: "03",
       title: "Développement",
-      text: "On construit une solution sur mesure, propre et évolutive.",
+      text: "On construit une solution propre, évolutive et centrée sur l'usage.",
     },
     {
       number: "04",
@@ -62,9 +62,8 @@ export default function HomePage() {
     <main>
       <header className="topbar">
         <div className="container topbar-inner">
-          <a href="/" className="brand">
-            <span className="brand-mark">DI</span>
-            <span>digitalintegration.ch</span>
+          <a href="/" className="brand" aria-label="Retour à l'accueil">
+            <img src="/logo.png" alt="Digital Integration" className="logo" />
           </a>
 
           <a href="#contact" className="btn btn-outline">
@@ -80,12 +79,12 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div>
             <div className="badge">
-              Développement sur mesure - Automatisation - IA appliquée
+              Développement sur mesure - Automatisation - Intégration digitale
             </div>
 
             <h1>
-              Des solutions digitales sur mesure pour faire avancer votre
-              entreprise.
+              Des solutions digitales <span>sur mesure</span> pour faire avancer
+              votre entreprise.
             </h1>
 
             <p className="hero-text">
@@ -119,7 +118,7 @@ export default function HomePage() {
               </div>
               <div className="card small-card">
                 <h3>Pragmatique</h3>
-                <p>Objectif simple: gagner du temps et améliorer l'efficacité.</p>
+                <p>Objectif simple : gagner du temps et améliorer l'efficacité.</p>
               </div>
               <div className="card small-card">
                 <h3>Evolutif</h3>
@@ -141,8 +140,8 @@ export default function HomePage() {
               <div className="case-block case-before">
                 <strong>Avant</strong>
                 <p>
-                  Emails, fichiers Excel, ressaisie manuelle, documents
-                  dispersés et manque de visibilité.
+                  Emails, fichiers Excel, ressaisie manuelle, informations
+                  dispersées et manque de visibilité.
                 </p>
               </div>
 
@@ -161,7 +160,7 @@ export default function HomePage() {
                 </div>
                 <div className="mini-card">
                   <strong>Automatisation</strong>
-                  <p>Connexions entre outils, notifications, documents, IA</p>
+                  <p>Connexions entre outils, notifications, documents et IA</p>
                 </div>
               </div>
             </div>
@@ -201,7 +200,7 @@ export default function HomePage() {
             <h2>Ce que nous pouvons concevoir pour vous.</h2>
             <p>
               Chaque projet part de vos contraintes réelles. L'objectif n'est
-              pas de rajouter un outil de plus, mais de créer un système utile.
+              pas d'ajouter un outil de plus, mais de créer un système utile.
             </p>
           </div>
 
@@ -284,29 +283,41 @@ export default function HomePage() {
         <div className="container">
           <div className="contact-box">
             <div className="section-label dark-label">Contact</div>
-            <h2>Vous avez une idée, un irritant métier ou un projet à lancer ?</h2>
+            <h2>Vous avez une idée, un besoin ou un projet à lancer ?</h2>
             <p>
               Echangeons autour de votre besoin. On regarde ensemble ce qui peut
               être simplifié, automatisé ou développé sur mesure.
             </p>
 
-<div className="hero-actions">
-  <a
-    href="mailto:info@digitalintegration.ch"
-    className="btn btn-white"
-  >
-    info@digitalintegration.ch
-  </a>
-  <a
-    href="mailto:info@digitalintegration.ch"
-    className="btn btn-outline-white"
-  >
-    Ecrire un email
-  </a>
-</div>
+            <div className="hero-actions">
+              <a
+                href="mailto:info@digitalintegration.ch"
+                className="btn btn-white"
+              >
+                info@digitalintegration.ch
+              </a>
+              <a
+                href="mailto:info@digitalintegration.ch"
+                className="btn btn-outline-white"
+              >
+                Ecrire un email
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="container footer-inner">
+          <div className="footer-brand">
+            <img src="/logo.png" alt="Digital Integration" className="logo logo-footer" />
+          </div>
+          <div className="footer-text">
+            <p>Digital Integration</p>
+            <p>Développement sur mesure - Automatisation - Intégration digitale</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
