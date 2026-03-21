@@ -9,7 +9,7 @@ export default function Footer() {
             <img
               src="/logo.png"
               alt="Digital Integration"
-              style={{ height: '34px', width: 'auto', display: 'block' }}
+              style={{ height: '34px', width: 'auto', display: 'block', alignSelf: 'flex-start' }}
             />
             <p className="footer-tagline">
               Développement sur mesure · Automatisation · Intégration digitale
