@@ -21,7 +21,7 @@ export default function PolitiqueConfidentialitePage() {
             <p>
               <strong>Digital Integration</strong><br />
               Lausanne, Suisse<br />
-              Email : <a href="mailto:contact@digitalintegration.ch">contact@digitalintegration.ch</a>
+              Email : <a href="mailto:info@digitalintegration.ch">info@digitalintegration.ch</a>
             </p>
 
             <h2>2. Données collectées</h2>
@@ -82,7 +82,7 @@ export default function PolitiqueConfidentialitePage() {
             </ul>
             <p>
               Pour exercer ces droits, contactez-nous à :{" "}
-              <a href="mailto:contact@digitalintegration.ch">contact@digitalintegration.ch</a>
+              <a href="mailto:info@digitalintegration.ch">info@digitalintegration.ch</a>
             </p>
 
             <h2>8. Sécurité</h2>
@@ -100,7 +100,7 @@ export default function PolitiqueConfidentialitePage() {
             <h2>10. Contact</h2>
             <p>
               Pour toute question relative à cette politique de confidentialité :{" "}
-              <a href="mailto:contact@digitalintegration.ch">contact@digitalintegration.ch</a>
+              <a href="mailto:info@digitalintegration.ch">info@digitalintegration.ch</a>
             </p>
           </div>
         </div>
