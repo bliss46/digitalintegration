@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -8,12 +6,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer-main">
           <div className="footer-brand-col">
-            <Image
+            <img
               src="/logo.png"
               alt="Digital Integration"
-              width={1200}
-              height={400}
-              style={{ height: '34px', width: 'auto' }}
+              style={{ height: '34px', width: 'auto', display: 'block' }}
             />
             <p className="footer-tagline">
               Développement sur mesure · Automatisation · Intégration digitale
