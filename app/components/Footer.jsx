@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Digital Integration"
-              className="logo logo-footer"
-              width={110}
-              height={30}
+              width={1200}
+              height={400}
+              style={{ height: '34px', width: 'auto' }}
             />
             <p className="footer-tagline">
               Développement sur mesure · Automatisation · Intégration digitale
