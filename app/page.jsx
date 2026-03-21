@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import UseCases from "./components/UseCases";
 import Methodology from "./components/Methodology";
 import Benefits from "./components/Benefits";
+import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <UseCases />
       <Methodology />
       <Benefits />
+      <FAQ />
       <Contact />
       <Footer />
     </main>

@@ -15,7 +15,14 @@ export default function Header() {
           />
         </a>
 
-        <a href="#contact" className="btn btn-outline">
+        <nav className="topbar-nav">
+          <a href="/#services">Services</a>
+          <a href="/#cas-usage">Cas d'usage</a>
+          <a href="/faq">FAQ</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+
+        <a href="/#contact" className="btn btn-outline">
           Parler de votre projet
         </a>
       </div>
