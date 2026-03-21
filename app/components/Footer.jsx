@@ -21,8 +21,8 @@ export default function Footer() {
             <p className="footer-address">
               📍 Lausanne, Suisse
             </p>
-            <a href="mailto:contact@digitalintegration.ch" className="footer-email">
-              contact@digitalintegration.ch
+            <a href="mailto:info@digitalintegration.ch" className="footer-email">
+              info@digitalintegration.ch
             </a>
           </div>
 

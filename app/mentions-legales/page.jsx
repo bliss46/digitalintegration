@@ -19,7 +19,7 @@ export default function MentionsLegalesPage() {
             <p>
               <strong>Digital Integration</strong><br />
               Lausanne, Suisse<br />
-              Email : <a href="mailto:contact@digitalintegration.ch">contact@digitalintegration.ch</a><br />
+              Email : <a href="mailto:info@digitalintegration.ch">info@digitalintegration.ch</a><br />
               Site web : <a href="https://www.digitalintegration.ch">www.digitalintegration.ch</a>
             </p>
 
@@ -67,7 +67,7 @@ export default function MentionsLegalesPage() {
             <p>
               Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter
               à l'adresse suivante :{" "}
-              <a href="mailto:contact@digitalintegration.ch">contact@digitalintegration.ch</a>
+              <a href="mailto:info@digitalintegration.ch">info@digitalintegration.ch</a>
             </p>
           </div>
         </div>

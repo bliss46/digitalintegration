@@ -14,6 +14,11 @@ const services = [
     description:
       "Connexion entre ERP, CRM, formulaires, bases de données et systèmes internes.",
   },
+  {
+    title: "Sites internet",
+    description:
+      "Création de sites vitrines et de landing pages modernes, rapides et optimisés pour le référencement.",
+  },
 ];
 
 export default function Services() {
@@ -29,7 +34,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid-3">
+        <div className="grid-2">
           {services.map((service) => (
             <div className="card hover-card service-card" key={service.title}>
               <div className="service-dot"></div>
