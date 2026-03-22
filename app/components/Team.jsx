@@ -1,16 +1,16 @@
 const members = [
   {
-    initials: "NF",
-    name: "Nicolas Favre",
-    title: "Co-fondateur & Responsable développement commercial",
-    bio: "Avec 20 ans d'expérience dans l'IT en Suisse, Nicolas accompagne les PME dans leur transformation digitale avec pragmatisme et exigence. Après avoir travaillé pour plusieurs grands comptes helvétiques, il co-fonde Digital Integration pour mettre cette expertise au service des entreprises romandes.",
+    initials: "C",
+    title: "Responsable développement & relation client",
+    role: "Co-fondateur",
+    bio: "20 ans d'expérience dans l'IT en Suisse romande, dont de nombreuses années d'accompagnement de PME dans leur transformation digitale. Une approche business avant tout, pour comprendre vos contraintes avant de parler technologie.",
     tags: ["Développement commercial", "Transformation digitale PME", "Relation client"],
   },
   {
-    initials: "SR",
-    name: "Sébastien Rouiller",
-    title: "Co-fondateur & Directeur technique",
-    bio: "Fort de 15 ans d'expérience en architecture de solutions, Sébastien cadre et conçoit des projets complexes avec rigueur. Certifié sur plusieurs technologies cloud et d'intégration, il garantit des livraisons solides, évolutives et adaptées à la réalité des équipes métier.",
+    initials: "T",
+    title: "Responsable technique & avant-vente",
+    role: "Co-fondateur",
+    bio: "15 ans d'expérience en architecture de solutions IT. Spécialiste du cadrage de projets complexes, il traduit vos besoins métier en solutions concrètes, maintenables et évolutives.",
     tags: ["Architecture solution", "Intégration API & cloud", "Expert automatisation"],
   },
 ];
@@ -30,13 +30,13 @@ export default function Team() {
 
         <div className="team-grid">
           {members.map((m) => (
-            <div className="card team-card" key={m.name}>
+            <div className="card team-card" key={m.title}>
               <div className="team-avatar" aria-hidden="true">
                 {m.initials}
               </div>
               <div className="team-info">
-                <div className="team-name">{m.name}</div>
-                <div className="team-role">{m.title}</div>
+                <div className="team-name">{m.title}</div>
+                <div className="team-role">{m.role}</div>
                 <p className="team-bio">{m.bio}</p>
                 <div className="team-tags">
                   {m.tags.map((tag) => (
