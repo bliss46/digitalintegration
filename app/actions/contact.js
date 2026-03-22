@@ -1,6 +1,8 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendContactEmail(formData) {
   const name = formData.get("name")?.toString().trim();
@@ -22,23 +24,12 @@ export async function sendContactEmail(formData) {
     };
   }
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === "true",
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-
   try {
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
+    await resend.emails.send({
+      from: "Digital Integration <contact@digitalintegration.ch>",
       replyTo: email,
       to: process.env.CONTACT_EMAIL || "info@digitalintegration.ch",
       subject: `Nouveau message de ${name} via le site`,
-      text: `Nom : ${name}\nEmail : ${email}\n\nMessage :\n${message}`,
       html: `
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
