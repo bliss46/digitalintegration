@@ -1037,7 +1037,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
   margin-top: 48px;
 }
 
@@ -1045,6 +1045,8 @@ p {
   display: flex;
   flex-direction: column;
   padding: 28px 24px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .pricing-icon {

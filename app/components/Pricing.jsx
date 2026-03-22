@@ -3,9 +3,9 @@ const services = [
     icon: "🌐",
     title: "Site internet",
     items: [
-      { label: "Landing page", price: "dès CHF 1'500" },
-      { label: "Site vitrine 5–10 pages", price: "CHF 3'000 – 6'000" },
-      { label: "Site avec espace client / formulaires avancés", price: "CHF 6'000 – 12'000" },
+      { label: "Landing page", price: "dès CHF 1'000" },
+      { label: "Site vitrine 5–10 pages", price: "CHF 2'000 – 5'000" },
+      { label: "Site avec espace client / formulaires avancés", price: "Sur devis" },
     ],
     delay: "Délai : 2 à 4 semaines",
   },
@@ -13,8 +13,8 @@ const services = [
     icon: "⚙️",
     title: "Application web sur mesure",
     items: [
-      { label: "Outil interne simple (formulaire, dashboard)", price: "CHF 4'000 – 8'000" },
-      { label: "Application métier multi-fonctions", price: "CHF 8'000 – 20'000" },
+      { label: "Outil interne simple (formulaire, dashboard)", price: "CHF 3'000 – 8'000" },
+      { label: "Application métier multi-fonctions", price: "Sur devis" },
       { label: "Plateforme complexe", price: "Sur devis" },
     ],
     delay: "Délai : 4 à 10 semaines",
@@ -25,7 +25,7 @@ const services = [
     items: [
       { label: "Workflow simple (2–3 outils)", price: "dès CHF 1'500" },
       { label: "Automatisation avancée multi-étapes", price: "CHF 3'000 – 7'000" },
-      { label: "Assistant IA métier", price: "CHF 4'000 – 10'000" },
+      { label: "Assistant IA métier", price: "Sur devis" },
     ],
     delay: "Délai : 1 à 3 semaines",
   },
