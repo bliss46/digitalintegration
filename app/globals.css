@@ -1031,3 +1031,339 @@ p {
     font-size: 28px;
   }
 }
+
+/* ── Pricing ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 28px;
+}
+
+.pricing-featured {
+  background: var(--gradient-main);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-10px);
+  box-shadow: 0 28px 56px rgba(37, 99, 235, 0.28);
+}
+
+.pricing-top {
+  margin-bottom: 24px;
+}
+
+.pricing-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  margin-bottom: 10px;
+}
+
+.pricing-featured .pricing-name {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pricing-price {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.pricing-featured .pricing-price {
+  color: #ffffff;
+}
+
+.pricing-subtitle {
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.pricing-featured .pricing-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  flex: 1;
+}
+
+.pricing-features li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.pricing-featured .pricing-features li {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-features li::before {
+  content: "✓";
+  font-weight: 700;
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.pricing-featured .pricing-features li::before {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-note {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 14px;
+  color: var(--color-text-soft);
+  padding: 14px 20px;
+  background: rgba(37, 99, 235, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.team-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px;
+}
+
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gradient-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+
+.team-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 4px;
+}
+
+.team-role {
+  font-size: 13px;
+  color: var(--color-blue);
+  font-weight: 600;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.team-bio {
+  font-size: 14px;
+  color: var(--color-text-soft);
+  line-height: 1.65;
+  margin: 0 0 14px;
+}
+
+.team-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.team-tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.07);
+  color: var(--color-blue);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+/* ── ConsultationCTA ── */
+.cta-band {
+  padding: 88px 0;
+  background: linear-gradient(135deg, #eef4ff 0%, #f6efff 100%);
+}
+
+.cta-band-inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-band h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.cta-band p {
+  font-size: 17px;
+  color: var(--color-text-soft);
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+
+/* ── Header dropdown ── */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: default;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.nav-dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  padding: 8px;
+  min-width: 280px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+  z-index: 200;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: background 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--color-blue);
+}
+
+.nav-dropdown-icon {
+  font-size: 10px;
+  color: var(--color-blue);
+  opacity: 0.6;
+}
+
+/* ── Service pages benefit list ── */
+.service-benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-dark);
+  padding: 10px 14px;
+  background: rgba(37, 99, 235, 0.04);
+  border-radius: 10px;
+  border-left: 3px solid var(--color-blue);
+}
+
+.service-benefit-list li::before {
+  content: "→";
+  color: var(--color-blue);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Responsive: new sections ── */
+@media (max-width: 1100px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-featured {
+    transform: none;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .team-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-band {
+    padding: 64px 0;
+  }
+
+  .cta-band h2 {
+    font-size: 28px;
+  }
+
+  .nav-dropdown-menu {
+    display: none;
+  }
+}

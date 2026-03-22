@@ -1,15 +1,22 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { sendContactEmail } from "../actions/contact";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMsg, setErrorMsg] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
+  const [message, setMessage] = useState("");
   const formRef = useRef(null);
 
-  function validate(name, email, message) {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get("message");
+    if (msg) setMessage(msg);
+  }, []);
+
+  function validate(name, email, msg) {
     const errors = {};
     if (!name.trim()) errors.name = "Votre nom est requis.";
     if (!email.trim()) {
@@ -17,9 +24,9 @@ export default function ContactForm() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       errors.email = "Email invalide.";
     }
-    if (!message.trim()) {
+    if (!msg.trim()) {
       errors.message = "Votre message est requis.";
-    } else if (message.trim().length < 10) {
+    } else if (msg.trim().length < 10) {
       errors.message = "Minimum 10 caractères.";
     }
     return errors;
@@ -30,13 +37,16 @@ export default function ContactForm() {
     const data = new FormData(formRef.current);
     const name = data.get("name") || "";
     const email = data.get("email") || "";
-    const message = data.get("message") || "";
+    const msg = message;
 
-    const errors = validate(name, email, message);
+    const errors = validate(name, email, msg);
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
       return;
     }
+
+    // include controlled message value in FormData
+    data.set("message", msg);
 
     setFieldErrors({});
     setStatus("loading");
@@ -45,6 +55,7 @@ export default function ContactForm() {
 
     if (result.success) {
       setStatus("success");
+      setMessage("");
       formRef.current.reset();
     } else {
       setStatus("error");
@@ -113,6 +124,8 @@ export default function ContactForm() {
           name="message"
           rows={5}
           placeholder="Décrivez votre besoin ou votre projet..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           aria-describedby={fieldErrors.message ? "error-message" : undefined}
         />
         {fieldErrors.message && (
