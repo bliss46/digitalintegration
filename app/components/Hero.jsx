@@ -1,8 +1,16 @@
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-orb hero-orb-1"></div>
-      <div className="hero-orb hero-orb-2"></div>
+      <div className="hero-bg">
+        {/* Photo libre de droit – Unsplash (licence gratuite) */}
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          aria-hidden="true"
+          className="hero-bg-img"
+        />
+        <div className="hero-overlay"></div>
+      </div>
 
       <div className="container hero-grid">
         <div>
