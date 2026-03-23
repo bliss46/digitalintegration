@@ -2,8 +2,6 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function sendContactEmail(formData) {
   const name = formData.get("name")?.toString().trim();
   const email = formData.get("email")?.toString().trim();
@@ -25,7 +23,9 @@ export async function sendContactEmail(formData) {
   }
 
   try {
-    await resend.emails.send({
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const { error } = await resend.emails.send({
       from: "Digital Integration <contact@digitalintegration.ch>",
       replyTo: email,
       to: process.env.CONTACT_EMAIL || "info@digitalintegration.ch",
@@ -39,8 +39,15 @@ export async function sendContactEmail(formData) {
       `,
     });
 
+    if (error) {
+      return {
+        success: false,
+        error: "Une erreur est survenue lors de l'envoi. Réessayez plus tard.",
+      };
+    }
+
     return { success: true };
-  } catch {
+  } catch (err) {
     return {
       success: false,
       error: "Une erreur est survenue lors de l'envoi. Réessayez plus tard.",
