@@ -42,7 +42,7 @@ export async function sendContactEmail(formData) {
     if (error) {
       return {
         success: false,
-        error: "Une erreur est survenue lors de l'envoi. Réessayez plus tard.",
+        error: `Resend error: ${error.name} — ${error.message}`,
       };
     }
 
@@ -50,7 +50,7 @@ export async function sendContactEmail(formData) {
   } catch (err) {
     return {
       success: false,
-      error: "Une erreur est survenue lors de l'envoi. Réessayez plus tard.",
+      error: `Exception: ${err?.message || String(err)}`,
     };
   }
 }
